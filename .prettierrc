@@ -1,0 +1,5 @@
+{
+  "trailingComma": "all",
+  "importOrder": ["react|react-dom", "^@material-ui/(.*)$", "^[./]"],
+  "importOrderSeparation": true
+}
