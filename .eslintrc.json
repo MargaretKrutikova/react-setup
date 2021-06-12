@@ -1,0 +1,19 @@
+{
+  "extends": [
+    "react-app",
+    "react-app/jest",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "plugins": ["@typescript-eslint", "react-hooks"],
+  "rules": {
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "no-console": "warn",
+    "no-debugger": "warn",
+    "react/require-default-props": "off",
+    // prefer named exports
+    "import/prefer-default-export": "off",
+    "import/no-default-export": "error"
+  }
+}
