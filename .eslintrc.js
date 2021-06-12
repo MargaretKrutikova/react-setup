@@ -1,7 +1,12 @@
 module.exports = {
   parser: "@typescript-eslint/parser",
-  extends: ["react-app", "airbnb", "plugin:prettier/recommended"],
-  plugins: ["prettier", "import"],
+  extends: [
+    "react-app",
+    "airbnb",
+    "plugin:jest/recommended",
+    "plugin:prettier/recommended",
+  ],
+  plugins: ["import", "react-hooks", "jest"],
   rules: {
     "no-restricted-globals": "off",
     "no-fallthrough": "off",
@@ -32,11 +37,6 @@ module.exports = {
     // this is very useful for typescript magic
     "react/jsx-props-no-spreading": "off",
     "react/destructuring-assignment": "off",
-    // Generated graphql files violate this and it's messy
-    camel_case: "off",
-    camelcase: "off",
-    // windows uses CRLF but eslint expects LF
-    "linebreak-style": "off",
     // TS checks this for us and this removes conflicts
     "no-unused-vars": "off",
     "react/require-default-props": "off",
@@ -50,6 +50,8 @@ module.exports = {
     ],
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
     "import/extensions": "off",
     // prefer named exports
     "import/prefer-default-export": "off",
