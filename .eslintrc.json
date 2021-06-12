@@ -13,6 +13,7 @@
     "no-console": "warn",
     "no-debugger": "warn",
     "react/require-default-props": "off",
+    "react/self-closing-comp": "error",
     // prefer named exports
     "import/prefer-default-export": "off",
     "import/no-default-export": "error",

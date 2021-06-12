@@ -5,7 +5,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Tools and libraries used:
 
 - `ESlint` is a static code analysis tool that is used only for enforcing code quality (and not formatting) rules. These rules are specified in `.eslintrc.js` in the root of the project,
-- `Prettier` is an opinionated code formatter with very few configuration options, this project uses only the default configuration,
+- `Prettier` is an opinionated code formatter with very few configuration options and this project uses very few overrides,
 - `npm` is a package manager and build tool for installing dependencies and running scripts from `package.json`.
 
 ## Configuration
@@ -13,6 +13,8 @@ Tools and libraries used:
 - `.eslintrc.js` includes eslint configuration, it extends the default `create-react-app` config (`react-app` in `extends`) and overrides/adds some more useful rules (e.g. only named exports, prefer arrow functions etc.),
 
 - `.prettierignore` is like `.gitignore` but for `prettier`,
+
+- `.prettierrc` includes code formatting configuration,
 
 - `package-lock.json` stores the exact dependency tree every time there is a modification of `node_modules` to ensure consistent behavior when building the project in different environments,
 
