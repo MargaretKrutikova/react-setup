@@ -12,5 +12,9 @@
     "typescript",
     "typescriptreact"
   ],
-  "typescript.tsdk": "./node_modules/typescript/lib"
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "eslint.packageManager": "npm",
+  "eslint.codeAction.showDocumentation": {
+    "enable": true
+  }
 }

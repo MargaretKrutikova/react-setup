@@ -14,6 +14,7 @@
     "react/require-default-props": "off",
     // prefer named exports
     "import/prefer-default-export": "off",
-    "import/no-default-export": "error"
+    "import/no-default-export": "error",
+    "arrow-body-style": ["warn", "as-needed"]
   }
 }
