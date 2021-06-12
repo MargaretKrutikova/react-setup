@@ -4,22 +4,23 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Tools and libraries used:
 
-- `ESlint` - static code analysis tool that includes code quality and stylistic rules to makes sure all code follows the rules and conventions setup for the project. These rules are specified in `.eslintrc.js` in the root of the project,
-- `Prettier` is used for code formatting and takes most of the rules from the `eslint` configuration,
+- `ESlint` is a static code analysis tool that is used only for enforcing code quality (and not formatting) rules. These rules are specified in `.eslintrc.js` in the root of the project,
+- `Prettier` is an opinionated code formatter with very few configuration options, this project uses only the default configuration,
 - `npm` is a package manager and build tool for installing dependencies and running scripts from `package.json`.
 
 ## Configuration
 
-- `.eslintrc.js` includes eslint configuration:
+- `.eslintrc.js` includes eslint configuration, it extends the default `create-react-app` config (`react-app` in `extends`) and overrides/adds some more useful rules (e.g. only named exports, prefer arrow functions etc.),
 
-  - in order to integrate it with typescript it uses `typescript` parser specified in `parser` under `.eslintrc.js`,
-  - all rules regarding code style and conventions are defined under `rules`
+- `.prettierignore` is like `.gitignore` but for `prettier`,
 
-- `.prettierc` has code formatting configuration rules, but takes most of the formatting rules from the `eslint` configuration,
+- `package-lock.json` stores the exact dependency tree every time there is a modification of `node_modules` to ensure consistent behavior when building the project in different environments,
 
-- `tsconfig.json` specifies root files and compiler options, see [docs](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) for more details,
+- `package.json` stores the project's metadata - dependencies with versions, build scripts, version etc.,
 
 - `project.code-workspace` defines a vscode workspace, which will activate vscode settings under `.vscode/settings.json`
+
+- `tsconfig.json` specifies root files and TS compiler options, see [docs](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) for more details,
 
 ## Setup
 
@@ -37,11 +38,9 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The page will reload if you make edits. You will also see any lint errors in the console.
 
 ### `npm test`
 
@@ -50,10 +49,10 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ### `npm build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Builds the app for production to the `build` folder. It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The build is minified and the filenames include the hashes.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `npm run lint`
+
+Runs `eslint` linting rules and treats warnings as errors.
